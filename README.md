@@ -3,8 +3,8 @@
 # PureScript npm package
 
 [![npm version](http://img.shields.io/npm/v/purescript.svg)](https://www.npmjs.com/package/purescript)
-[![Build Status](http://img.shields.io/travis/purescript-contrib/node-purescript-bin.svg)](http://travis-ci.org/purescript-contrib/node-purescript-bin)
-[![Build status](https://ci.appveyor.com/api/projects/status/bmwd6id35uw9txnv/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/node-purescript-bin/branch/master)
+[![Build Status](https://travis-ci.org/purescript-contrib/node-purescript.svg?branch=master)](https://travis-ci.org/purescript-contrib/node-purescript)
+[![Build status](https://ci.appveyor.com/api/projects/status/63vhekj9utfg9nxy/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/node-purescript/branch/master)
 
 [PureScript](http://www.purescript.org/) binary wrapper that makes it seamlessly available via [npm](https://www.npmjs.com/)
 
@@ -28,7 +28,7 @@ __2.__ The second plan: if no cache is available, it downloads a prebuilt binary
 
 <img alt="screencast: downloading a binary" src="./media/screencast1.gif" width="650px">
 
-__3.__ The last resort: if a prebuilt binary is not provided for your platform or the downloaded binary doesn't work correctly, it downloads [the PureScript source code](https://github.com/purescript/purescript/tree/master) and compile it with [Stack](https://docs.haskellstack.org/).
+__3.__ The last resort: if no prebuilt binary is provided for your platform or the downloaded binary doesn't work correctly, it downloads [the PureScript source code](https://github.com/purescript/purescript/tree/master) and compile it with [Stack](https://docs.haskellstack.org/).
 
 <img alt="screencast: compile a source" src="./media/screencast2.gif" width="650px">
 
@@ -61,6 +61,6 @@ purs --help
 
 ## License
 
-[ISC License](./LICENSE) © 2017 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 2017 - 2018 Shinnosuke Watanabe
 
 The original PureScript logo is included in [purescript/purescript](https://github.com/purescript/purescript) repository which is licensed under [the 3-Clause BSD License](https://github.com/purescript/purescript/blob/master/LICENSE).
