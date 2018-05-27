@@ -1,10 +1,8 @@
 language: node_js
 matrix:
   include:
-  - node_js: 6
-    before_install: npm install --global npm
-    before_script: npm install --no-save async-to-gen
-    script: node_modules/.bin/async-node test.js
+  - node_js: 8
+    script: node test.js
   - os: osx
     node_js: node
     osx_image: xcode9.1
