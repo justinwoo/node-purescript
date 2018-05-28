@@ -1,6 +1,6 @@
 {
 	"name": "purescript",
-	"version": "0.12.0-rc1",
+	"version": "0.12.0",
 	"description": "PureScript wrapper that makes it available as a local dependency",
 	"license": "ISC",
 	"repository": "purescript-contrib/node-purescript",
@@ -40,7 +40,7 @@
 		"wrapper"
 	],
 	"dependencies": {
-		"install-purescript-cli": "^0.3.0"
+		"install-purescript-cli": "^0.4.0 || ^0.3.0"
 	},
 	"devDependencies": {
 		"@shinnn/eslint-config-node": "^5.0.0",
