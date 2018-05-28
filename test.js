@@ -6,11 +6,10 @@ const {resolve} = require('path');
 
 const execa = require('execa');
 const purescript = require('.');
-// const semverRegex = require('semver-regex');
+const semverRegex = require('semver-regex');
 const test = require('tape');
 
-// const {bin, scripts} = require('./package.json');
-const {bin} = require('./package.json');
+const {bin, scripts} = require('./package.json');
 
 test('`bin` field of package.json', t => {
 	t.deepEqual(
@@ -60,8 +59,7 @@ test('`postinstall` script', async t => {
 
 	t.equal(
 		(await execa(purescript, ['--version'])).stdout,
-		// scripts.postinstall.match(semverRegex())[0],
-		'0.12.0',
+		scripts.postinstall.match(semverRegex())[0],
 		'should install a PureScript binary.'
 	);
 
