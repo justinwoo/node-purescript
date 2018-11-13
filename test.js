@@ -1,15 +1,17 @@
 'use strict';
 
+const {EOL} = require('os');
+const {execFile} = require('child_process');
 const {lstat} = require('fs');
 const {promisify} = require('util');
-const {resolve} = require('path');
+const {join} = require('path');
 
-const execa = require('execa');
+const extractSemver = require('semver').coerce;
 const purescript = require('.');
-const semverRegex = require('semver-regex');
 const test = require('tape');
-
 const {bin, scripts} = require('./package.json');
+
+const promisifiedExecFile = promisify(execFile);
 
 test('`bin` field of package.json', t => {
 	t.deepEqual(
@@ -30,7 +32,7 @@ test('Node.js API', t => {
 
 	t.equal(
 		purescript,
-		resolve(bin.purs),
+		join(__dirname, bin.purs),
 		'should be equal to the binary path.'
 	);
 
@@ -38,7 +40,7 @@ test('Node.js API', t => {
 });
 
 test('`prepublishOnly` script', async t => {
-	await execa('npm', ['run', 'prepublishOnly']);
+	await promisifiedExecFile('npm', ['run', 'prepublishOnly'], {shell: process.platform === 'win32'});
 	const stat = await promisify(lstat)(purescript);
 
 	t.ok(
@@ -55,11 +57,11 @@ test('`prepublishOnly` script', async t => {
 });
 
 test('`postinstall` script', async t => {
-	await execa('npm', ['run', 'postinstall']);
+	await promisifiedExecFile('npm', ['run', 'postinstall'], {shell: process.platform === 'win32'});
 
 	t.equal(
-		(await execa(purescript, ['--version'])).stdout,
-		scripts.postinstall.match(semverRegex())[0],
+		(await promisifiedExecFile(purescript, ['--version'])).stdout,
+		`${extractSemver(scripts.postinstall).toString()}${EOL}`,
 		'should install a PureScript binary.'
 	);
 
