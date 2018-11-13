@@ -1,4 +1,4 @@
-<img alt="logo" src="./media/logo.png" width="330px" align="right">
+<img alt="logo" src="media/artwork.svg" width="330px" align="right">
 
 # PureScript npm package
 
@@ -40,10 +40,10 @@ Type: `string`
 An absolute path to the installed PureScript binary, which can be used with [`child_process`](https://nodejs.org/api/child_process.html) functions.
 
 ```javascript
-const {exec} = require('child_process');
-const purs = require('purescript'); //=> 'Users/you/example/node_modules/purescript/purs.bin'
+const {execFile} = require('child_process');
+const purs = require('purescript'); //=> '/Users/you/example/node_modules/purescript/purs.bin'
 
-exec(purs, ['compile', 'input.purs', '--output', 'output.purs'], () => {
+execFile(purs, ['compile', 'input.purs', '--output', 'output.purs'], () => {
   console.log('Compiled.');
 });
 ```
@@ -62,4 +62,4 @@ purs --help
 
 [ISC License](./LICENSE) © 2017 - 2018 Shinnosuke Watanabe
 
-The original PureScript logo is included in [purescript/purescript](https://github.com/purescript/purescript) repository which is licensed under [the 3-Clause BSD License](https://github.com/purescript/purescript/blob/master/LICENSE).
+The [artwork](./media/artwork.svg) is a derivative of [PureScript logo](https://github.com/purescript/logo/blob/master/PS_Logo_Final.svg) by [Gareth Hughes](https://github.com/goodworkson) used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and it is also licensed under CC BY 4.0 by Shinnosuke Watanabe.
