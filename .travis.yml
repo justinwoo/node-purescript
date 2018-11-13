@@ -1,10 +1,11 @@
+branches:
+  except: /^v\d/
 language: node_js
 matrix:
   include:
-  - node_js: 8
-    script: node test.js
-  - os: osx
+  - dist: xenial
     node_js: node
+  - os: osx
+    node_js: 8
     osx_image: xcode9.3
-branches:
-  except: /^v\d/
+    script: node test.js
