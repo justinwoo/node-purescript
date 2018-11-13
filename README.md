@@ -4,7 +4,6 @@
 
 [![npm version](http://img.shields.io/npm/v/purescript.svg)](https://www.npmjs.com/package/purescript)
 [![Build Status](https://travis-ci.org/purescript-contrib/node-purescript.svg?branch=master)](https://travis-ci.org/purescript-contrib/node-purescript)
-[![Build status](https://ci.appveyor.com/api/projects/status/63vhekj9utfg9nxy/branch/master?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/node-purescript/branch/master)
 
 [PureScript](http://www.purescript.org/) binary wrapper that makes it seamlessly available via [npm](https://www.npmjs.com/)
 
