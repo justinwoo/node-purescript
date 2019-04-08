@@ -5,11 +5,11 @@
 [![npm version](http://img.shields.io/npm/v/purescript.svg)](https://www.npmjs.com/package/purescript)
 [![Build Status](https://travis-ci.org/purescript-contrib/node-purescript.svg?branch=master)](https://travis-ci.org/purescript-contrib/node-purescript)
 
-[PureScript](http://www.purescript.org/) binary wrapper that makes it seamlessly available via [npm](https://www.npmjs.com/)
+[PureScript](https://github.com/purescript/purescript) binary wrapper that makes it seamlessly available via [npm](https://www.npmjs.com/)
 
 ## Installation
 
-[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/about-npm/).
 
 ```
 npm install purescript
@@ -20,8 +20,6 @@ Note that this package makes maximum use of `postinstall` [script](https://docs.
 Once the command above is executed,
 
 __1.__ First, it checks if a PureScript binary has been already cached in your machine, and restores that if available.
-
-<img alt="screencast: restoring a cache" src="./media/screencast0.gif" width="650px">
 
 __2.__ The second plan: if no cache is available, it downloads a prebuilt binary from [the PureScript release page](https://github.com/purescript/purescript/releases).
 
@@ -60,6 +58,6 @@ purs --help
 
 ## License
 
-[ISC License](./LICENSE) © 2017 - 2018 Shinnosuke Watanabe
+[ISC License](./LICENSE) © 2017 - 2019 Shinnosuke Watanabe
 
 The [artwork](./media/artwork.svg) is a derivative of [PureScript logo](https://github.com/purescript/logo/blob/master/PS_Logo_Final.svg) by [Gareth Hughes](https://github.com/goodworkson) used under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), and it is also licensed under CC BY 4.0 by Shinnosuke Watanabe.

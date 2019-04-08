@@ -13,7 +13,7 @@
 		"purs": "purs.bin"
 	},
 	"scripts": {
-		"postinstall": "install-purescript --purs-ver=0.12.4 .",
+		"postinstall": "install-purescript --purs-ver=0.12.4",
 		"pretest": "eslint .",
 		"test": "node test.js",
 		"prepublishOnly": "node prepublish.js"
@@ -39,13 +39,13 @@
 		"wrapper"
 	],
 	"dependencies": {
-		"install-purescript-cli": "^0.4.0 || ^0.3.0"
+		"install-purescript-cli": "^0.4.0"
 	},
 	"devDependencies": {
-		"@shinnn/eslint-config": "^6.8.1",
-		"eslint": "^5.9.0",
-		"semver": "^5.6.0",
-		"tape": "^4.9.1"
+		"@shinnn/eslint-config": "^6.10.0",
+		"eslint": "^5.16.0",
+		"semver": "^6.0.0",
+		"tape": "^4.10.1"
 	},
 	"eslintConfig": {
 		"extends": "@shinnn"
